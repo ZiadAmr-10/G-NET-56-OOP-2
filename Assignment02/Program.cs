@@ -30,6 +30,18 @@
             public decimal TotalPrice => Quantity*unitPrice;
             */
             #endregion
+            #region Q03
+            /*
+            a)its called an indexer 
+              the purpose is :
+              allows an object to be accessed using array-like syntax([]). 
+            b)The indexer calls the set accessor and stores "Ali" in names[10].
+              To make it safer , add validation to check if the index is valid before storing the value.
+            c)Yes,Can have more than one indexer and it's called indexer overloading 
+              and based on the parameter type the indexer is chosen
+              it's useful in phonebook , you can search by index or by a person's name. 
+             */
+            #endregion
             #endregion
         }
     }
