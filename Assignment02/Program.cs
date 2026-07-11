@@ -42,6 +42,21 @@
             .  it's useful in phonebook , you can search by index or by a person's name. 
              */
             #endregion
+            #region Q04
+            /*
+              a)Static means there is only one shared field for all objects,
+                It is not created again for every new object and
+                the difference between static and normal field
+                The Item field belongs to each object, so every object has its own Item value,
+                The TotalOrders field is shared by all objects and it stores the total number of orders 
+              b)No,because item is a normal field 
+                and static method can only access static members directly 
+                because it does not belong to a specific object.
+            */
+
+
+            
+            #endregion
             #endregion
         }
     }
