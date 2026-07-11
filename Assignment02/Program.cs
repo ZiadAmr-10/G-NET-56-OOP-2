@@ -16,6 +16,20 @@
             and if another project uses this class from a DLL file, and I change a field, the other project must update its code.
              */
             #endregion
+            #region Q02
+            /*    
+            - Field ->Store data directly ,no validation ,if public can anyone access and modify it 
+              property->Provide controlled access to data ,can contain  logic and  validate values before storing them,Protects the object's internal state
+            - Yes can contain  logic 
+             public decimal TotalPrice {
+            get{
+              return Quantity * UnitPrice;
+            }
+            }
+            or 
+            public decimal TotalPrice => Quantity*unitPrice;
+            */
+            #endregion
             #endregion
         }
     }
