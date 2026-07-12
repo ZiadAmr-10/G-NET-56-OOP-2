@@ -55,8 +55,40 @@
             */
 
 
-            
+
             #endregion
+            #endregion
+            #region Part02
+            Cinema cinema = new Cinema();
+            Console.WriteLine("==========Ticket Booking==========");
+            for (int i = 0; i < 3; i++) {
+                Console.WriteLine($"Enter Data For Ticket{i+1}");
+                Ticket ticket =ReadInput.ReadTicket();
+                cinema.AddTicket(ticket);
+            }
+            Console.WriteLine("==========All Tickets=========");
+                for (int i = 0; i < 20; i++)
+                {
+                    Ticket ticket = cinema[i];
+
+                    if (ticket != null)
+                    {
+                        ticket.Print();
+                    }
+                
+                 }
+            Console.WriteLine("==========Search by Movie==========");
+            Console.WriteLine("Enter a Movie Name : ");
+            string movieName = Console.ReadLine();
+            Ticket FindMovie = cinema[movieName];
+            Console.WriteLine(FindMovie);
+            Console.WriteLine("=============== Statistics =================");
+            Console.WriteLine($"Total Tickets Sold: {Ticket.GetTotalSold()}");
+            Console.WriteLine($"Booking Reference 1: {BookingHelper.GenerateBookingReference()}");
+            Console.WriteLine($"Booking Reference 2: {BookingHelper.GenerateBookingReference()}");
+            double discount = BookingHelper.CalcGroupDiscount(5, 80);
+            Console.WriteLine($"Group Discount (5 tickets x 80 EGP): {discount} EGP (10% off applied)");
+
             #endregion
         }
     }
